@@ -7,6 +7,7 @@ class Preprocessing:
     def extract_resume_text(self,resume_path):
         pdf = pdfx.PDFx(resume_path)
         text = pdf.get_text()
+        
         return text
     
     def preprocess_text(self,text):

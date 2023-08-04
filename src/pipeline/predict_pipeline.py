@@ -9,6 +9,7 @@ class PreprocessPipeline:
             resume_path = os.path.join("artifacts", "Resume_file.pdf")
             preprocessor = Preprocessing()
             Text = preprocessor.extract_resume_text(resume_path)
+            # if(Text==""): print("Why not given")
             Tokens = preprocessor.preprocess_text(Text)
             Model_input = preprocessor.pos_filter(Tokens)
             return Model_input
