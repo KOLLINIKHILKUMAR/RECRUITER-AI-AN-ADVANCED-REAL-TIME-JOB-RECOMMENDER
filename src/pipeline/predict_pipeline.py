@@ -159,7 +159,7 @@ class WebScraping:
             # job_url_string_fresherworld='https://www.freshersworld.com/jobs/jobsearch/'+Job_Role+'-jobs-for-be-btech?course=16'
             # jobs_list_fresherworld=self.fresherworld(job_url_string_fresherworld,Job_Role)
             # print(len(jobs_list_fresherworld))
-            # print(jobs_list_fresherworld[0])
+            # print(jobs_list_freskoherworld[0])
             return jobs_list_internshala
         
         except Exception as e:
