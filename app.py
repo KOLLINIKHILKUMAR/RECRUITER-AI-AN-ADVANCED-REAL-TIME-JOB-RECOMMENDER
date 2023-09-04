@@ -25,12 +25,17 @@ def predict():
         ScoreModel_input=Scorepredict.scoreprocess()
         Score=Scorepredict.predictscore(ScoreModel_input)
 
+        Recom=Recommend()
+        skills=Recom.Get_skills(Job_Role)
+        jobs=Recom.Get_jobs(Job_Role)
+
+        
         Webscrap=WebScraping()
         fetched_data=Webscrap.GetList(Job_Role)
 
         # data.Deletefiles()
 
-    return render_template("results.html",Job_Role=Job_Role,Score=Score,fetched_data=fetched_data)
+    return render_template("results.html",Job_Role=Job_Role,Score=Score,fetched_data=fetched_data,skills=skills,jobs=jobs)
 
 
 if __name__=="__main__":

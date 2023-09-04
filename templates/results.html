@@ -123,17 +123,52 @@
 
     <div id ="jobsdata"></div>
 
-    <!-- Skills Start -->
-    <div class="container-xxl mt-12 py-5">
+    <!-- skills and jobs Start -->
+    <div class="container-xxl feature mt-10 py-5" id = "result">
         <div class="container">
             <div class="row g-4 align-items-end mb-4">
                 <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
-                    <h2 class=" mb-4 text-center ">Top 5 Skills and Job Roles Recommended For You!</h2>  
+                    <h2 class=" mb-4 text-center ">Top 5 Skills and Job Roles Recommended For You!</h2> 
                 </div>
-            </div>       
+            </div>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-12">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <div class="row g-4">
+                                <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                    <div class="feature-box border rounded p-4">
+                                        <h5><strong>Skills Recommended</strong></h5>
+                                        {% for skill in skills %}
+                                        <h5 class="mt-5"><i class="fa fa-check text-primary me-3"></i>{{ skill }}</h5>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row g-4">
+                                <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                    <div class="feature-box border rounded p-4">
+                                        <h5><strong>Job Roles Recommended</strong></h5>
+                                        {% for job in jobs %}
+                                        <h5 class="mt-5"><i class="fa fa-check text-primary me-3"></i>{{ job }}</h5>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 align-items-end mb-4">
+                <a href="#jobsdata" class="scroll-down">
+                    <img src="{{ url_for('static', filename='img/arrow-down.svg') }}" alt="scroll-down">
+                </a>
+            </div>
         </div>
     </div>
-    <!-- Skills End -->
+    <!-- skills and jobs End -->
 
 
     <!-- Jobs cards starts-->

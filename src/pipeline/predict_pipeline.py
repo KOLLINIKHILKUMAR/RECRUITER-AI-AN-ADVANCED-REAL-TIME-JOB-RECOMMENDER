@@ -64,6 +64,21 @@ class ScorePipeline:
             raise CustomException(e,sys)
 
 
+class Recommend:
+    def __init__(self):
+        self.Role_recommen_file= pd.read_csv("artifacts/Recom.csv")
+
+
+    def Get_skills(self,Job_Role):
+        category_data = self.Role_recommen_file[self.Role_recommen_file['Category'] == Job_Role]
+        skills = eval(category_data['Skills'].iloc[0])[:5]
+        return skills
+
+    def Get_jobs(self,Job_Role):
+       category_data = self.Role_recommen_file[self.Role_recommen_file['Category'] == Job_Role]
+       job_roles = eval(category_data['Job_Roles'].iloc[0])[:5]
+       return job_roles
+
 class WebScraping:
     def __init__(self):
         pass
@@ -164,6 +179,7 @@ class WebScraping:
         
         except Exception as e:
             raise CustomException(e,sys)
+
 
 
 class CustomData:

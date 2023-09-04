@@ -19,5 +19,5 @@ from src.components.data_transformation import Preprocessing
 from flask import Flask,request,render_template,Response,send_file
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
-from src.pipeline.predict_pipeline import CustomData,PreprocessPipeline,ModelPipeline,ScorePipeline,WebScraping
+from src.pipeline.predict_pipeline import CustomData,PreprocessPipeline,ModelPipeline,ScorePipeline,WebScraping,Recommend
 
