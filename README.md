@@ -51,4 +51,4 @@ https://github.com/Leelaprasad001/Recruiter-AI/assets/76583080/514714f8-aeb3-4d7
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/KOLLINIKHILKUMAR/RECRUITER-AI-AN-ADVANCED-REAL-TIME-JOB-RECOMMEDATION.git
+   git clone https://github.com/KOLLINIKHILKUMAR/RECRUITER-AI-AN-ADVANCED-REAL-TIME-JOB-RECOMMEDER.git
