@@ -92,12 +92,12 @@ class WebScraping:
             for card in job_cards:
 
                 job_title_elem = card.find('h3', class_='heading_4_5 profile')
-                company_name_elem = card.find('h4', class_='heading_6 company_name')
+                company_name_elem = card.find('div', class_='heading_6 company_name')
                 location_elem = card.find('a', class_='location_link')
                 start_date_elem = card.find('div', id='start-date-first')
-                salary = card.find('div', class_='salary')
+                salary = card.find('span', class_='desktop')
                 experience = card.find('div', class_='desktop-text')
-                apply = card.find('a')
+                apply = card.find('a',class_='view_detail_button_outline')
 
                 if not all([job_title_elem, company_name_elem, location_elem, start_date_elem, salary, experience]):
                     continue

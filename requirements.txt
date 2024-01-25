@@ -7,6 +7,9 @@ seaborn
 nltk
 pdfx
 spacy
+torch 
+torchvision 
+torchaudio
 transformers
 requests
 beautifulsoup4
